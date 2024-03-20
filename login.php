@@ -14,3 +14,9 @@ if ((isset($_POST['signin']) && ($_POST['signin'] == "Sign in"))) {
         echo "<p style='text-align: center'>Invalid username or password</p>";
     $connect->close();
 }
+
+if ((isset($_POST['signup']) && ($_POST['signup'] == "Sign up")))
+{
+    header("location: signup.php");
+    die;
+}

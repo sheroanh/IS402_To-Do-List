@@ -12,4 +12,10 @@
         }
         $connect->close();
       }
+
+      if ((isset($_POST['signin']) && ($_POST['signin'] == "Sign in"))) 
+      {
+        header("location: signin.php");
+        die;
+      }
   ?>

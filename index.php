@@ -82,6 +82,11 @@
   </div>
 
   <?php
+  if($_SESSION['username'] == null)
+  {
+    header("location: signin.php");
+    die;
+  }
   if ((isset($_POST['submit']) && ($_POST['submit'] == 'save'))) {
     $title = $_POST['title'];
     $description = $_POST['description'];

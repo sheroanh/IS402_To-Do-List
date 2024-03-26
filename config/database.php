@@ -25,8 +25,6 @@ class Database
             created_at timestamp NOT NULL DEFAULT current_timestamp(),
             updated_at timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci",
-        "ALTER TABLE task
-          ADD PRIMARY KEY (id)",
         "ALTER TABLE user
           ADD PRIMARY KEY (username)",
         "ALTER TABLE task

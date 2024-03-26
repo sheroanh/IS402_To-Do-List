@@ -1,6 +1,6 @@
 <?php 
 namespace App\Controllers;
-use App\Configs\Connect;
+use App\Configs\Database;
 use App\Controller;
 
 class LoginController extends Controller {
@@ -9,7 +9,7 @@ class LoginController extends Controller {
     }
     
     public function show(){
-        $connect = new Connect();
+        $connect = new Database();
         $connect = $connect->connect();
         if (empty($_POST['username']) || empty($_POST['password'])) {
             header("location: signup");

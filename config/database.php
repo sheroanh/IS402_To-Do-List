@@ -14,21 +14,19 @@ class Database
     private $sqlStatements = [
         "CREATE TABLE IF NOT EXISTS user (
             username varchar(50) NOT NULL,
-            password varchar(50) DEFAULT NULL
-          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci",
+            password varchar(50) DEFAULT NULL,
+            PRIMARY KEY (username)
+          )",
         "CREATE TABLE IF NOT EXISTS task (
-            id int(11) NOT NULL,
+            id int(11) NOT NULL AUTO_INCREMENT,
             title mediumtext DEFAULT NULL,
             description mediumtext DEFAULT NULL,
             username varchar(50) DEFAULT NULL,
             is_done tinyint(1) NOT NULL DEFAULT 0,
             created_at timestamp NOT NULL DEFAULT current_timestamp(),
-            updated_at timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci",
-        "ALTER TABLE user
-          ADD PRIMARY KEY (username)",
-        "ALTER TABLE task
-          MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1",
+            updated_at timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+            PRIMARY KEY (id)
+          )",
         "ALTER TABLE task
           ADD CONSTRAINT task_ibfk_1 FOREIGN KEY (username) REFERENCES user (username)"
     ];

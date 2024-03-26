@@ -1,14 +1,14 @@
 <?php
 namespace App\Controllers;
 
-use App\Configs\Connect;
+use App\Configs\Database;
 use App\Controller;
 
 class TaskController extends Controller
 {
     public function show($error = null, $success = null)
     {
-        $connect = new Connect();
+        $connect = new Database();
         $connect = $connect->connect();
         $username = $_SESSION['username'];
         $sql = "SELECT * FROM TASK WHERE USERNAME=?";
@@ -37,7 +37,7 @@ class TaskController extends Controller
             die;
         }
         try {
-            $connect = new Connect();
+            $connect = new Database();
             $connect = $connect->connect();
             $username = $_SESSION['username'];
             $title = $_POST['title'];
@@ -59,7 +59,7 @@ class TaskController extends Controller
             die;
         }
         try {
-            $connect = new Connect();
+            $connect = new Database();
             $connect = $connect->connect();
             $id = $_POST['id'];
             $username = $_SESSION['username'];
@@ -88,7 +88,7 @@ class TaskController extends Controller
             $username = $_SESSION['username'];
             $is_done = $_POST['is_done'];
             $id = $_POST['id'];
-            $connect = new Connect();
+            $connect = new Database();
             $connect = $connect->connect();
             $sql = "UPDATE TASK SET IS_DONE=? WHERE ID=? AND USERNAME=?";
             $stmt = $connect->prepare($sql);

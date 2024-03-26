@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-use App\Configs\Connect;
+use App\Configs\Database;
 use App\Controller;
 
 class RegisterController extends Controller
@@ -13,7 +13,7 @@ class RegisterController extends Controller
 
     public function store()
     {
-        $connect = new Connect();
+        $connect = new Database();
         $connect = $connect->connect();
         if (empty ($_POST['username']) || empty ($_POST['password'])) {
             $this->render('authentication', ['error' => 'Username and password are required', 'action' => 'signup', 'username' => $_POST['username'], 'password' => $_POST['password']]);

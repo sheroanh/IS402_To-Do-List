@@ -45,7 +45,7 @@ class Connect
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci";
         $connect->query($sql);
         $sql = "CREATE TABLE IF NOT EXISTS task (
-            id int(11) NOT NULL,
+            id int(11) NOT NULL AUTO_INCREMENT,
             title mediumtext DEFAULT NULL,
             description mediumtext DEFAULT NULL,
             username varchar(50) DEFAULT NULL,

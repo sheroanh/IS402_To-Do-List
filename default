@@ -3,12 +3,12 @@ server {
     listen      [::]:8080;
     root        /home/site/wwwroot;
     index       index.php;
-    server_name  tasks-list.azurewebsites.net www.tasks-list.azurewebsites.net; 
+    # server_name  tasks-list.azurewebsites.net www.tasks-list.azurewebsites.net; 
     port_in_redirect off;
 
     location / {            
         index  index.php index.html index.htm hostingstart.html;
-        try_files $uri $uri/ /index.php?$args; # Changed for Laravel
+        try_files $uri $uri/ /index.php?$args; 
     }
 
     location = /50x.html {

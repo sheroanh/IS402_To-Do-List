@@ -24,9 +24,11 @@ class Router
                 $controller = new $controller();
                 $controller->$action();
             } else {
+                http_response_code(405);
                 $this->error("Method not allowed");
             }
         } else {
+            http_response_code(404);
             $this->error("Page not found");
         }
     }

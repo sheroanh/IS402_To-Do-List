@@ -64,7 +64,7 @@ function renderTask($data)
 <body>
   <nav class="navbar navbar-dark bg-dark ">
     <div class="container d-flex justify-content-between">
-      <a class="navbar-brand" href="/">To-Do List</a><a href="/logout" class="btn btn-danger">Logout</a>
+      <a class="navbar-brand" href="/">To-Do List (Preview)</a><a href="/logout" class="btn btn-danger">Logout</a>
     </div>
   </nav>
   <div class="container my-3">

@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar navbar-dark bg-dark ">
     <div class="container d-flex justify-content-between">
-      <a class="navbar-brand" href="/">To-Do List</a>
+      <a class="navbar-brand" href="/">To-Do List (Preview)</a>
     </div>
   </nav>
   <div class="mt-5 card" style="max-width: 480px; margin:auto">

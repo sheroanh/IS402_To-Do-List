@@ -54,7 +54,7 @@ function renderTask($data)
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To-Do List (Preview)</title>
+  <title>To-Do List</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -64,7 +64,7 @@ function renderTask($data)
 <body>
   <nav class="navbar navbar-dark bg-dark ">
     <div class="container d-flex justify-content-between">
-      <a class="navbar-brand" href="/">To-Do List</a><a href="/logout" class="btn btn-danger">Logout</a>
+      <a class="navbar-brand" href="/">To-Do List (Preview)</a><a href="/logout" class="btn btn-danger">Logout</a>
     </div>
   </nav>
   <div class="container my-3">
